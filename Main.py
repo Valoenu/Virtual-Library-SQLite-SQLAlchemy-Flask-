@@ -32,7 +32,7 @@ with app.app_context():
 @append.route('/')
 def home():
     results = database.session.execute(database.select(Book).order_by(Book.title))
-    all = results.scallars().all() # Get one element from results 
+    all = results.scallars().all() # Get elements from results 
     return render_template("index.html", library=books_library)
 
 
