@@ -10,7 +10,7 @@ app = Flask(__name__)
 class Base(DeclarativeBase):
     pass
     
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqllite:///allbooks.db"
+app = database.config['SQLALCHEMY_DATABASE_URI'] = "sqllite:///allbooks.db"
 
 #Extansion ~ You can name it db instead database (It will be much easier)
 database = SQLAlchemy(model_class=Base)
